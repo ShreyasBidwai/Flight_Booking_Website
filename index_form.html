@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="number"],
+    .form-group select {
+        width: calc(50% - 5px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .form-group select {
+        width: 100%;
+    }
+    .form-group .btn-group {
+        display: flex;
+    }
+    .form-group .btn-group button {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #FF9209;
+    }
+    .form-group .btn-group button.active {
+        /* background-color: #03424C; */
+        /* color: black; */
+    }
+
+    .form-group .btn-group :focus {
+        background-color: #03424C;
+        color: white;
+    }
+
+    .form-group .btn-group button:not(:last-child) {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #03424C;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn :hover{
+        transform: scale(1.1);
+    }
+    .form-group .date-inputs {
+        display: flex;
+    }
+    .form-group .date-inputs input {
+        width: 50%;
+    }
+    .form-group .seats-inputs {
+        display: flex;
+    }
+    .form-group .seats-inputs label {
+        margin-right: 10px;
+    }
+    .form-group .seats-inputs input {
+        width: 50px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Flight Registration Form</h2>
+    <div class="form-group">
+        <label>Flight Type:</label>
+        <div class="btn-group">
+            <button class="flight-type-btn active" onclick="showOneWay()">One Way</button>
+            <button class="flight-type-btn" onclick="showRoundTrip()">Round Trip</button>
+            <button class="flight-type-btn" onclick="showMultiCity()">Multi City</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Flying From:</label>
+        <input type="text" id="flying-from">
+    </div>
+    <div class="form-group">
+        <label>Flying To:</label>
+        <input type="text" id="flying-to">
+    </div>
+    <div class="form-group" id="date-section">
+        <label>Dates:</label>
+        <div class="date-inputs">
+            <input type="date" id="boarding-date">
+            <input type="date" id="return-date" style="display: none;">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Travel Class:</label>
+        <select id="travel-class">
+            <option>Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <div class="seats-inputs">
+            <label>Adults:</label>
+            <input type="number" min="1" value="1">
+            <label>Children:</label>
+            <input type="number" min="0" value="0">
+        </div>
+    </div>
+    <button class="submit-btn">Check Availability</button>
+</div>
+
+<script>
+    function showOneWay() {
+        document.getElementById('date-section').innerHTML = `
+            <label>Date:</label>
+            <div class="date-inputs">
+                <input type="date" id="boarding-date">
+            </div>
+        `;
+    }
+
+    function showRoundTrip() {
+        document.getElementById('date-section').innerHTML = `
+            <label>Dates:</label>
+            <div class="date-inputs">
+                <input type="date" id="boarding-date">
+                <input type="date" id="return-date">
+            </div>
+        `;
+    }
+
+    function showMultiCity() {
+        // Code for multi-city functionality
+    }
+</script>
+</body>
+</html>

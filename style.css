@@ -1,0 +1,202 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+
+
+body{
+    background-image: url(./Resources/lux-Airport-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.brand_name{
+    margin-top: 6%;
+    /* height: 75%;
+    width: 52%; */
+    height: 75px;
+    width: 299px;
+    padding: 0%;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* margin-left: 200px; */
+}
+
+.btn{
+    margin: 30px;
+    margin-right: 35px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #FF9209;
+    /* animation: button 1s ease-in-out infinite; */
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+    background-color: #03424C;
+    color: white;
+}
+
+.brand_name{
+    margin-left: 80px;
+    margin-top: 10px;
+    font-weight: normal;
+    size: 100px;
+    color: black;
+}
+
+#logo_strip{
+    height: 25px;
+    width: 25px;
+    margin-top: 47%;
+    margin-left: 92%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+/* .searchBar{
+    border: 1px solid black;
+    margin-top: 10%;
+    margin-left: 65%;
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+     background-color: rgba(255, 255, 255, 0); 
+} */
+
+.offer_bar{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 27px;
+    width: 100%;
+    margin-top: 8%;
+    display: inline-flex;
+}
+
+.coupon_01{
+    margin-top: 4px;
+    margin-right: 28px;
+    color: #03424C;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    animation: movecoupon_01 5s linear infinite;
+}
+
+@keyframes movecoupon_01 {
+    0%{
+        transform: translateX(100%);
+    }
+    
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    left: 10;
+    top: 10;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Adjusted margin */
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    width: calc(50% - 5px);
+    padding: 8px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group select {
+    width: 100%;
+}
+.form-group .btn-group {
+    display: flex;
+}
+.form-group .btn-group button {
+    flex: 1;
+    padding: 8px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF9209;
+}
+.form-group .btn-group button.active {
+    /* background-color: #03424C; */
+    /* color: black; */
+}
+
+.form-group .btn-group :focus {
+    background-color: #03424C;
+    color: white;
+}
+
+.form-group .btn-group button:not(:last-child) {
+    margin-right: 10px;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #03424C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-btn :hover{
+    transform: scale(1.1);
+}
+.form-group .date-inputs {
+    display: flex;
+}
+.form-group .date-inputs input {
+    width: 50%;
+}
+.form-group .seats-inputs {
+    display: flex;
+}
+.form-group .seats-inputs label {
+    margin-right: 10px;
+}
+.form-group .seats-inputs input {
+    width: 50px;
+}

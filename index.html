@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Resources/icons8-airplane-take-off-96 (1).png" type="image/x-icon">
+    <title>Book My Flight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div id="brand_name">
+            <img class="brand_name" src="./Resources/book-my-flight-high-resolution-logo-transparent.png" alt="">
+        </div>
+        <div id="buttons" class="container">
+            <button class="btn">Destinations</button>
+            <button class="btn">Book Hotels</button>
+            <button class="btn">Book Train</button>
+            <button class="btn">Contact</button>
+            <button class="btn">About us</button>
+            <button class="btn">Signup</button>
+
+        </div>
+    </header>
+<!-- 
+    <div id="logo_strip">
+        <img class=img1 src="./Resources/instagram-svgrepo-com.svg" alt="instagram">
+        <img class=img1 src="./Resources/instagram-svgrepo-com.svg" alt="instagram">
+        <img class=img1 src="./Resources/instagram-svgrepo-com.svg" alt="instagram">
+    </div> -->
+    <!-- <form class="searchBar">
+        <input type="text" id="searchBar" name="search" placeholder="Are you looking for something...?">
+    </form>
+     -->
+
+     <!-- <div class="offer_bar">
+        <div class="coupon_01">Flat ₹200 Off</div>
+
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        <div class="coupon_01">Flat ₹200 Off</div>
+        
+     </div> -->
+
+     <div class="container">
+        <h2>Flight Registration Form</h2>
+        <div class="form-group">
+            <label>Flight Type:</label>
+            <div class="btn-group">
+                <button class="flight-type-btn active" onclick="showOneWay()">One Way</button>
+                <button class="flight-type-btn" onclick="showRoundTrip()">Round Trip</button>
+                <button class="flight-type-btn" onclick="showMultiCity()">Multi City</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Flying From:</label>
+            <input type="text" id="flying-from">
+        </div>
+        <div class="form-group">
+            <label>Flying To:</label>
+            <input type="text" id="flying-to">
+        </div>
+        <div class="form-group" id="date-section">
+            <label>Dates:</label>
+            <div class="date-inputs">
+                <input type="date" id="boarding-date">
+                <input type="date" id="return-date" style="display: none;">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Travel Class:</label>
+            <select id="travel-class">
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="seats-inputs">
+                <label>Adults:</label>
+                <input type="number" min="1" value="1">
+                <label>Children:</label>
+                <input type="number" min="0" value="0">
+            </div>
+        </div>
+        <button class="submit-btn">Check Availability</button>
+    </div>
+    
+    <script>
+        function showOneWay() {
+            document.getElementById('date-section').innerHTML = `
+                <label>Date:</label>
+                <div class="date-inputs">
+                    <input type="date" id="boarding-date">
+                </div>
+            `;
+        }
+    
+        function showRoundTrip() {
+            document.getElementById('date-section').innerHTML = `
+                <label>Dates:</label>
+                <div class="date-inputs">
+                    <input type="date" id="boarding-date">
+                    <input type="date" id="return-date">
+                </div>
+            `;
+        }
+    
+        function showMultiCity() {
+            // Code for multi-city functionality
+        }
+    </script>
+</body>
+</html>
